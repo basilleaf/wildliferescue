@@ -61,7 +61,7 @@ for p in page:
         print "added new " + ' '.join([p["county"], p["city"], p["name"]])
     except IntegrityError:
         connection._rollback()
-        print "we all good " + p["name"]
+        # print "we all good " + p["name"]
         pass
 
     fac = Facility.objects.get(city=p["city"], name=p["name"])
@@ -71,7 +71,7 @@ for p in page:
         try:
             fac.address = loc[u'responseData']['results'][0][u'streetAddress']
             fac.save()  # address found, save to db
-            print "saved address for " + fac.name + "\n " + fac.address + "\n" + fac.city
+            # print "saved address for " + fac.name + "\n " + fac.address + "\n" + fac.city
         except IndexError:
             print "no address for " + fac.name + " in " + fac.city
 

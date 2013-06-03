@@ -25,7 +25,6 @@ DATABASES = {'default': {  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'o
     }}
 
 # Parse database configuration from $DATABASE_URL
-
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()
 

@@ -13,10 +13,15 @@
 from rescue_map_project import settings
 from django.core.management import setup_environ
 setup_environ(settings)
+
 try:
-    from rescue_map_project.settings_local import *
-except ImportError:
-    pass
+    GOOG_API_KEY = settings.GOOG_API_KEY
+except AttributeError:
+    try:
+        from rescue_map_project.settings_local import *
+    except ImportError:
+        pass
+
 
 # script imports
 import time

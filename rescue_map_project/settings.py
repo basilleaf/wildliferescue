@@ -150,6 +150,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'south',
+    'rescue_map_app',
     )
 
 # A sample logging configuration. The only tangible logging

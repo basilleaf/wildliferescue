@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # Django settings for rescue_map_project project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -169,7 +170,17 @@ LOGGING = {
                 'level': 'ERROR', 'propagate': True}},
     }
 
+
+try:
+    GOOG_API_KEY = os.environ['GOOG_API_KEY']
+
+except KeyError:
+    pass
+
+
 try:
     from settings_local import *
 except ImportError:
     pass
+
+

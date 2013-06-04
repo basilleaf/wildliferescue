@@ -6,6 +6,8 @@ from rescue_map_app.views import *
 # admin.autodiscover()
 
 urlpatterns = patterns('rescue_map_app.views',
+    url(r'^all.json', 'data_dump'),
+
     # Examples:
     # url(r'^$', 'rescue_map_project.views.home', name='home'),
     # url(r'^rescue_map_project/', include('rescue_map_project.foo.urls')),
@@ -15,6 +17,5 @@ urlpatterns = patterns('rescue_map_app.views',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-    url(r'^all.json', 'data_dump'),
 
 )

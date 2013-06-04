@@ -4,7 +4,7 @@ class Facility(models.Model):
     county = models.CharField(max_length=70)
     city = models.CharField(max_length=70)
     name = models.CharField(max_length=100)
-    phone = models.CharField(max_length=17, null=True, blank=True)
+    phone = models.CharField(max_length=25, null=True, blank=True)
     specializations = models.CharField(max_length=200, null=True, blank=True)
     scraperwiki_id = models.IntegerField(null=True, blank=True)
     address = models.CharField(max_length=100, null=True, blank=True)

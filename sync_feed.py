@@ -1,10 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
-
-    TODO
-    this is just another scraperwiki, branch this! get rid of django and models
-
     grabs data from remote json feed, inserts/updates local database
     does address lookups on google maps api
     --- --- ---
@@ -14,6 +10,9 @@
 
     this script takes the data from that feed and puts it into local database
     then tries to do googlemaps address lookups on each
+    --- --- ---
+    I would prefer this just be another scraperwiki but I don't see
+    a way to put private env vars in scraperwiki (for googlemaps api key)
 
 """
 # scraperwiki url
@@ -35,7 +34,6 @@ from rescue_map_app.models import Facility
 from random import randrange
 
 GOOG_API_KEY = settings.GOOG_API_KEY
-
 
 class sync_feed:
 

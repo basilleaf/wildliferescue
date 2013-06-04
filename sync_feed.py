@@ -81,7 +81,7 @@ class sync_feed:
             given a place from the data source in json, add or find our model object, returns model obj
         """
         # place = Facility(county="Alameda", city="Hayward", name="Homer Simpson", scraperwiki_id=3)  # this works
-        place = Facility(county=json_place["county"], city=json_place["city"], name=json_place["name"], state="CA")
+        place = Facility(county=json_place["county"], city=json_place["city"], name=json_place["name"], state="CA", phone=json_place["phone"], specializations=json_place["specializations"])
 
         try:
             place.save()

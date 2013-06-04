@@ -117,4 +117,4 @@ if __name__ == "__main__":
 
     for j in data:
         place = sf.find_facility(j)
-        # sf.update_address(place)
+        sf.update_address(place)

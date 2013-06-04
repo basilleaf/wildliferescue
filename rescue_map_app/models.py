@@ -3,7 +3,7 @@ from django.db import models
 class Facility(models.Model):
     county = models.CharField(max_length=70)
     city = models.CharField(max_length=70)
-    name = models.CharField(max_length=60)
+    name = models.CharField(max_length=100)
     phone = models.CharField(max_length=17, null=True, blank=True)
     specializations = models.CharField(max_length=200, null=True, blank=True)
     scraperwiki_id = models.IntegerField(null=True, blank=True)
